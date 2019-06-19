@@ -14,12 +14,12 @@ if ! grep -Fq "${USER_ID}" /etc/passwd; then
     cat ${HOME}/passwd.template | \
     sed "s/\${USER_ID}/${USER_ID}/g" | \
     sed "s/\${GROUP_ID}/${GROUP_ID}/g" | \
-    sed "s/\${HOME}/\/srv\/jekyll/g" > /etc/passwd
+    sed "s/\${HOME}/\/home\/jekyll/g" > /etc/passwd
 
     cat ${HOME}/group.template | \
     sed "s/\${USER_ID}/${USER_ID}/g" | \
     sed "s/\${GROUP_ID}/${GROUP_ID}/g" | \
-    sed "s/\${HOME}/\/srv\/jekyll/g" > /etc/group
+    sed "s/\${HOME}/\/home\/jekyll/g" > /etc/group
 fi
 
 
